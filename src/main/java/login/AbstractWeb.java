@@ -2,7 +2,7 @@ package login;
 
 import org.openqa.selenium.WebDriver;
 
-public abstract class AbstractApp {
+public abstract class AbstractWeb {
     private static final ThreadLocal<Browser> WEB = ThreadLocal.withInitial(Browser::new);
 
     public static ThreadLocal<Browser> getBrowser() {
@@ -14,5 +14,11 @@ public abstract class AbstractApp {
                 .get()
                 .getDriver();
     }
+
+    public static void tearDownBrowser() {
+        getBrowser().get().quitDriver();
+        getBrowser().remove();
+    }
+
 }
 

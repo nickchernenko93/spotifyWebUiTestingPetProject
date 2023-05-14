@@ -1,6 +1,7 @@
 package login;
 
 import io.qameta.allure.Step;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,17 +23,7 @@ public class Browser {
         return driver;
     }
 
-//    public WebDriver setDriver(WebDriver newDriver) {
-//        return driver = newDriver;
-//    }
-
-//    @BeforeAll
-//    static void setupAll() {
-//        WebDriverManager.chromedriver().setup();
-//    }
-
-    @AfterEach
-    public void quit() {
+    public void quitDriver() {
         try {
             if (this.driver != null)
                 this.driver.quit();
