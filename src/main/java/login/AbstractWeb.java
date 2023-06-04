@@ -1,5 +1,6 @@
 package login;
 
+import com.codeborne.selenide.SelenideDriver;
 import org.openqa.selenium.WebDriver;
 
 public abstract class AbstractWeb {
@@ -9,7 +10,7 @@ public abstract class AbstractWeb {
         return WEB;
     }
 
-    public static WebDriver getDriverInstance() {
+    public static SelenideDriver getDriverInstance() {
         return getBrowser()
                 .get()
                 .getDriver();
