@@ -1,11 +1,11 @@
-# OCE PetStore Automation Project
+# PetStore Automation Project
 This is simple automation project. It is support  Web UI testing.
 
 ## Supported browser
     Google Chrome
 
 ## Stack of technologies
-1. Java8
+1. Java13
 2. Selenium
 3. Selenide
 4. Page Object design pattern
