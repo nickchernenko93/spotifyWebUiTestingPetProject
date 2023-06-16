@@ -3,7 +3,7 @@
        thread-count="1" verbose="1">
     <test group-by-instances="true" name="rerun">
         <classes>
-<!--            <class name="homepage.SignUpTest"/>-->
+<!--            <class name="homepage.WhenSignUp"/>-->
         </classes>
     </test>
 </suite>

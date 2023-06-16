@@ -1,4 +1,4 @@
-# PetStore Automation Project
+# Spotify Automation Project
 This is simple automation project. It is support  Web UI testing.
 
 ## Supported browser
@@ -8,9 +8,11 @@ This is simple automation project. It is support  Web UI testing.
 1. Java13
 2. Selenium
 3. Selenide
-4. Page Object design pattern
-5. Allure reporting
-6. Jenkins CI
+4. Junit5
+5. Serenity
+6. Page Object design pattern
+7. Jenkins CI
+8. Allure report
 
 ## Running test and generating reports
 1. Execute mvn clean test command to execute test cases
