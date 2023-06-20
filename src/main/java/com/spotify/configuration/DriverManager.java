@@ -1,4 +1,4 @@
-package com.spotify.login;
+package com.spotify.configuration;
 
 
 public abstract class DriverManager {

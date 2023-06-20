@@ -15,4 +15,4 @@ This is simple automation project. It is support  Web UI testing.
 8. Allure report
 
 ## Running test and generating reports
-1. Execute mvn clean test command to execute test cases
+1. To generate serenity report  please use mvn serenity:aggregate

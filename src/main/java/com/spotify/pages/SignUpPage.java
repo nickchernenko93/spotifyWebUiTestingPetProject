@@ -3,10 +3,11 @@ package com.spotify.pages;
 import net.serenitybdd.core.pages.ListOfWebElementFacades;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static com.spotify.login.DriverManager.SIGN_UP_URL;
+import static com.spotify.configuration.DriverManager.SIGN_UP_URL;
 
 @DefaultUrl(SIGN_UP_URL)
 public class SignUpPage extends PageObject {
@@ -27,12 +28,10 @@ public class SignUpPage extends PageObject {
     private WebElement genderRadioButtons;
     @FindBy(xpath = "//div[@data-encore-id = 'formCheckbox']")
     private ListOfWebElementFacades termsCheckBoxes;
-    @FindBy(xpath = "//button[@type='submit'")
+    @FindBy(xpath = "//button[@type='submit']")
     private WebElement signUpButton;
     @FindBy(xpath = "//div[@id='onetrust-close-btn-container']")
     private WebElement closePopOverButton;
-    @FindBy(xpath = "//div[@aria-label='Error indicator']")
-    private ListOfWebElementFacades errorMessages;
 
     public SignUpPage setEmail(String email) {
         emailField.sendKeys(email);
@@ -77,10 +76,11 @@ public class SignUpPage extends PageObject {
         if (closePopOverButton.isDisplayed()) {
             closePopOverButton.click();
         }
-        return new SignUpPage();
+        return this;
     }
 
     public boolean isErrorMessageShown(String errorMessageText) {
-        return errorMessages.contains(errorMessageText);
+        WebElement errorMessage = find(By.xpath(String.format("//div[@aria-label='Error indicator']//span[contains(text(), '%s')]", errorMessageText)));
+        return errorMessage.isDisplayed();
     }
 }

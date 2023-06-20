@@ -3,7 +3,7 @@ package com.spotify.steps.serenity;
 import com.spotify.pages.SignUpPage;
 import net.thucydides.core.annotations.Step;
 
-public class SignUpSerenitySteps {
+public class SignUpSteps {
     private SignUpPage signUpPage;
 
     @Step("User open 'Sign Up' page")
@@ -11,9 +11,14 @@ public class SignUpSerenitySteps {
         signUpPage.open();
     }
 
-    @Step("User set [0] email")
-    public void type_email(String email) {
+    @Step("User set email")
+    public void set_email(String email) {
         signUpPage.setEmail(email);
+    }
+
+    @Step("User set password")
+    public void set_password(String password){
+        signUpPage.setPassword(password);
     }
 
     @Step("Close pop up if it appear")
