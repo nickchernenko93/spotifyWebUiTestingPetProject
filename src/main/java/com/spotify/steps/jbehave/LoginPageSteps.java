@@ -16,12 +16,12 @@ public class LoginPageSteps {
         loginSteps.open_login_page();
     }
 
-    @When("I set valid user name")
-    public void setEmail(String userName) {
-        loginSteps.set_userName(userName);
+    @When("I set valid user name \"$username\"")
+    public void setEmail(String username) {
+        loginSteps.set_username(username);
     }
 
-    @When("I set valid password")
+    @When("I set valid password \"$password\"")
     public void setPassword(String password) {
         loginSteps.set_password(password);
     }

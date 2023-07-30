@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$x;
-import static com.spotify.configuration.DriverManager.SIGN_UP_URL;
+import static com.spotify.configuration.UrlManager.SIGN_UP_URL;
 
 @DefaultUrl(SIGN_UP_URL)
 public class SignUpPage {

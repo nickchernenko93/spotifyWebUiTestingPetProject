@@ -5,7 +5,7 @@ import com.spotify.pages.HomePage;
 import com.spotify.pages.LoginPage;
 import net.thucydides.core.annotations.Step;
 
-import static com.spotify.configuration.DriverManager.LOGIN_PAGE_URL;
+import static com.spotify.configuration.UrlManager.LOGIN_PAGE_URL;
 
 public class LoginSteps {
     private LoginPage loginPage = new LoginPage();
@@ -23,9 +23,9 @@ public class LoginSteps {
         loginPage.setPassword(password);
     }
 
-    @Step("User set password")
-    public void set_userName(String userName) {
-        loginPage.setPassword(userName);
+    @Step("User set user name")
+    public void set_username(String userName) {
+        loginPage.setUserName(userName);
     }
 
     @Step("User click login button")

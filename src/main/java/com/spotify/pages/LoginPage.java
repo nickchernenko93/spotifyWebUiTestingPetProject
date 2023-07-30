@@ -5,7 +5,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.spotify.configuration.DriverManager.LOGIN_PAGE_URL;
+import static com.spotify.configuration.UrlManager.LOGIN_PAGE_URL;
 
 @DefaultUrl(LOGIN_PAGE_URL)
 public class LoginPage {
@@ -28,7 +28,7 @@ public class LoginPage {
     }
 
     public HomePage clickLoginButton() {
-        $(passwordField).shouldBe(Condition.visible, Condition.enabled).click();
+        $(loginButton).shouldBe(Condition.visible, Condition.enabled).click();
         return new HomePage();
     }
 }

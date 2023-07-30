@@ -4,7 +4,7 @@ import com.codeborne.selenide.Selenide;
 import com.spotify.pages.SignUpPage;
 import net.thucydides.core.annotations.Step;
 
-import static com.spotify.configuration.DriverManager.SIGN_UP_URL;
+import static com.spotify.configuration.UrlManager.SIGN_UP_URL;
 
 public class SignUpSteps {
     private SignUpPage signUpPage = new SignUpPage();
