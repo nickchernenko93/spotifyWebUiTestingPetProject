@@ -1,14 +1,17 @@
 package com.spotify.steps.serenity;
 
+import com.codeborne.selenide.Selenide;
 import com.spotify.pages.SignUpPage;
 import net.thucydides.core.annotations.Step;
 
+import static com.spotify.configuration.DriverManager.SIGN_UP_URL;
+
 public class SignUpSteps {
-    private SignUpPage signUpPage;
+    private SignUpPage signUpPage = new SignUpPage();
 
     @Step("User open 'Sign Up' page")
     public void open_signup_page() {
-        signUpPage.open();
+        Selenide.open(SIGN_UP_URL);
     }
 
     @Step("User set email")
@@ -31,7 +34,7 @@ public class SignUpSteps {
         signUpPage.clickSignUpButton();
     }
 
-    @Step("Is [0] error message shown")
+    @Step("Is '{0}' error message shown")
     public boolean is_error_message_shown(String errorMessage) {
         return signUpPage.isErrorMessageShown(errorMessage);
     }

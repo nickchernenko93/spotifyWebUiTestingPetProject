@@ -22,8 +22,9 @@ public class SignUpPageSteps {
     }
 
     @When("I set password \"$password\"")
-    public void setPassword(String password) {
+    public SignUpPageSteps setPassword(String password) {
         signUpSteps.set_password(password);
+        return this;
     }
 
     @When("I press 'Sign-up' button")
