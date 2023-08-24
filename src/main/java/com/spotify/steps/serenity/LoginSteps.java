@@ -36,5 +36,6 @@ public class LoginSteps {
     @Step("Is home page opened")
     public boolean is_home_page_opened() {
         return homePage.isHomePageOpened();
+        // test
     }
 }
