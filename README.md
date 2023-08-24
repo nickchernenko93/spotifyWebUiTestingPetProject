@@ -16,4 +16,4 @@ This is simple automation project. It is support  Web UI testing.
 9. Junit5
 
 ## Running test and generating reports
-1. To generate serenity report  please use mvn serenity:aggregate
+1. To run tests execute mvn clean verify
