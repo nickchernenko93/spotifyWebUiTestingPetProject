@@ -1,5 +1,6 @@
 package com.spotify.pages;
 
+import com.codeborne.selenide.Condition;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 
@@ -9,9 +10,9 @@ import static com.spotify.configuration.UrlManager.HOME_PAGE_URL;
 @DefaultUrl(HOME_PAGE_URL)
 public class HomePage {
 
-    private By homePageIcon = By.xpath("//span[contains(text(), 'Home')]");
+    private By homePageIcon = By.xpath("//invalidspan[contains(text(), 'Home')]");
 
     public boolean isHomePageOpened(){
-        return $(homePageIcon).isDisplayed();
+        return $(homePageIcon).shouldBe(Condition.visible).isDisplayed();
     }
 }

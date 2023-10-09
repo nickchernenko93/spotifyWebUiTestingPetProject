@@ -3,8 +3,11 @@ Meta:
 Narrative:
 As a register user i want to perform successful login to spotify
 
-Scenario: scenario description
+Lifecycle:
+Before:
 Given I open login page
+
+Scenario: scenario description
 When I set valid user name "your user name"
 And I set valid password "your password"
 And I click login button

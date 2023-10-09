@@ -5,6 +5,7 @@ import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.junit.Assert;
 
 public class LoginPageSteps {
 
@@ -17,7 +18,7 @@ public class LoginPageSteps {
     }
 
     @When("I set valid user name \"$username\"")
-    public void setEmail(String username) {
+    public void setUserName(String username) {
         loginSteps.set_username(username);
     }
 
@@ -32,7 +33,7 @@ public class LoginPageSteps {
     }
 
     @Then("I should be redirected to home page")
-    public boolean isHomePageOpened() {
-        return loginSteps.is_home_page_opened();
+    public void isHomePageOpened() {
+        Assert.assertTrue("Home page should be opened", loginSteps.is_home_page_opened());
     }
 }

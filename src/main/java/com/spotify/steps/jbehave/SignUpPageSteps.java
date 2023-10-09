@@ -33,7 +33,7 @@ public class SignUpPageSteps {
     }
 
     @Then("I see error message \"$errorMessage\"")
-    public void isErrorMessageShown(String errorMessage) {
-        signUpSteps.is_error_message_shown(errorMessage);
+    public boolean isErrorMessageShown(String errorMessage) {
+        return signUpSteps.is_error_message_shown(errorMessage);
     }
 }
