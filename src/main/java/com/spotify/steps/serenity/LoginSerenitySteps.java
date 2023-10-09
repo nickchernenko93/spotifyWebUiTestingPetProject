@@ -8,7 +8,7 @@ import net.thucydides.core.steps.ScenarioSteps;
 
 import static com.spotify.configuration.UrlManager.LOGIN_PAGE_URL;
 
-public class LoginSteps extends ScenarioSteps {
+public class LoginSerenitySteps extends ScenarioSteps {
     private LoginPage loginPage = new LoginPage();
 
     // TODO: 7/30/23 remove it later

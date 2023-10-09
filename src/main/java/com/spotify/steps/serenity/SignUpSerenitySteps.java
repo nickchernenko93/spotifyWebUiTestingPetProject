@@ -6,7 +6,7 @@ import net.thucydides.core.annotations.Step;
 
 import static com.spotify.configuration.UrlManager.SIGN_UP_URL;
 
-public class SignUpSteps {
+public class SignUpSerenitySteps {
     private SignUpPage signUpPage = new SignUpPage();
 
     @Step("User open 'Sign Up' page")
