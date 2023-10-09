@@ -7,8 +7,9 @@ Lifecycle:
 Before:
 Given I open login page
 
-Scenario: scenario description
+Scenario: enter valid username and password
 When I set valid user name "your user name"
 And I set valid password "your password"
 And I click login button
 Then I should be redirected to home page
+

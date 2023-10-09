@@ -10,7 +10,7 @@ import static com.spotify.configuration.UrlManager.HOME_PAGE_URL;
 @DefaultUrl(HOME_PAGE_URL)
 public class HomePage {
 
-    private By homePageIcon = By.xpath("//invalidspan[contains(text(), 'Home')]");
+    private By homePageIcon = By.xpath("//span[contains(text(), 'Home')]");
 
     public boolean isHomePageOpened(){
         return $(homePageIcon).shouldBe(Condition.visible).isDisplayed();
