@@ -18,12 +18,13 @@ public class UserDataProvider {
         }
     }
 
-    public String getUserName(String username) {
-        return properties.getProperty(username);
+    public String getRegisterUserName() {
+        return properties.getProperty(UserList.REGISTER_USER_NAME);
+
     }
 
-    public String getPassword(String password) {
-        return properties.getProperty(password);
+    public String getRegisterUserPassword() {
+        return properties.getProperty(UserList.REGISTER_USER_PASSWORD);
     }
 
     public String[] getAllUsernames() {

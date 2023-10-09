@@ -1,5 +1,6 @@
 package com.spotify.steps.jbehave;
 
+import com.spotify.data.users.UserDataProvider;
 import com.spotify.steps.serenity.LoginSerenitySteps;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
@@ -9,6 +10,7 @@ import org.junit.Assert;
 
 public class LoginPageSteps {
 
+    private UserDataProvider userDataProvider = new UserDataProvider();
     @Steps
     LoginSerenitySteps loginSerenitySteps;
 
@@ -17,14 +19,14 @@ public class LoginPageSteps {
         loginSerenitySteps.open_login_page();
     }
 
-    @When("I set valid user name \"$username\"")
-    public void setUserName(String username) {
-        loginSerenitySteps.set_username(username);
+    @When("I set valid user name")
+    public void setUserName() {
+        loginSerenitySteps.set_username(userDataProvider.getRegisterUserName());
     }
 
-    @When("I set valid password \"$password\"")
-    public void setPassword(String password) {
-        loginSerenitySteps.set_password(password);
+    @When("I set valid password")
+    public void setPassword() {
+        loginSerenitySteps.set_password(userDataProvider.getRegisterUserPassword());
     }
 
     @When("I click login button")
