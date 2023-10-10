@@ -1,5 +1,6 @@
 package com.spotify.steps.jbehave;
 
+import com.spotify.data.users.UserDataProvider;
 import com.spotify.steps.serenity.SignUpSerenitySteps;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
@@ -7,8 +8,10 @@ import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
 public class SignUpPageSteps {
+    private UserDataProvider userDataProvider = new UserDataProvider();
     @Steps
     SignUpSerenitySteps signUpSerenitySteps;
+
 
     @Given("I open sign up page")
     public void openSignUpPage() {
@@ -20,9 +23,9 @@ public class SignUpPageSteps {
         signUpSerenitySteps.close_pop_up();
     }
 
-    @When("I set password \"$password\"")
-    public SignUpPageSteps setPassword(String password) {
-        signUpSerenitySteps.set_password(password);
+    @When("I set invalid username")
+    public SignUpPageSteps setUsername() {
+        signUpSerenitySteps.set_password(userDataProvider.getInvalidUserName());
         return this;
     }
 

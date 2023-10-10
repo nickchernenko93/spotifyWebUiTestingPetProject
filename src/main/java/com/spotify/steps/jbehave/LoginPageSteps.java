@@ -21,12 +21,12 @@ public class LoginPageSteps {
 
     @When("I set valid user name")
     public void setUserName() {
-        loginSerenitySteps.set_username(userDataProvider.getRegisterUserName());
+        loginSerenitySteps.set_username(userDataProvider.getValidUserName());
     }
 
     @When("I set valid password")
     public void setPassword() {
-        loginSerenitySteps.set_password(userDataProvider.getRegisterUserPassword());
+        loginSerenitySteps.set_password(userDataProvider.getValidUserPassword());
     }
 
     @When("I click login button")

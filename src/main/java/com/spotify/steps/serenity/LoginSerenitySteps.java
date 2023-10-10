@@ -4,13 +4,11 @@ import com.codeborne.selenide.Selenide;
 import com.spotify.pages.HomePage;
 import com.spotify.pages.LoginPage;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.steps.ScenarioSteps;
 
 import static com.spotify.configuration.UrlManager.LOGIN_PAGE_URL;
 
-public class LoginSerenitySteps extends ScenarioSteps {
+public class LoginSerenitySteps {
     private LoginPage loginPage = new LoginPage();
-
     // TODO: 7/30/23 remove it later
     private HomePage homePage = new HomePage();
 

@@ -18,13 +18,20 @@ public class UserDataProvider {
         }
     }
 
-    public String getRegisterUserName() {
-        return properties.getProperty(UserList.REGISTER_USER_NAME);
-
+    public String getValidUserName() {
+        return properties.getProperty(UserList.VALID_USER_NAME);
     }
 
-    public String getRegisterUserPassword() {
-        return properties.getProperty(UserList.REGISTER_USER_PASSWORD);
+    public String getValidUserPassword() {
+        return properties.getProperty(UserList.VALID_USER_PASSWORD);
+    }
+
+    public String getInvalidUserName() {
+        return properties.getProperty(UserList.INVALID_USER_NAME);
+    }
+
+    public String getInvalidUserPassword() {
+        return properties.getProperty(UserList.INVALID_USER_PASSWORD);
     }
 
     public String[] getAllUsernames() {
