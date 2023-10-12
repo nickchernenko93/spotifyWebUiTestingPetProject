@@ -34,8 +34,13 @@ public class LoginPageSteps {
         loginSerenitySteps.click_login_button();
     }
 
-    @Then("I should be redirected to home page")
+    @Then("I should not be redirected to home page")
     public void isHomePageOpened() {
         Assert.assertFalse("Home page should not be opened", loginSerenitySteps.is_home_page_opened());
+    }
+
+    @Then("I should see error message")
+    public void isErrorMessageShown() {
+        Assert.assertTrue("Error message should be shown", loginSerenitySteps.is_error_message_shown());
     }
 }

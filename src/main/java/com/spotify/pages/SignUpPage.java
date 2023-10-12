@@ -3,14 +3,11 @@ package com.spotify.pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$x;
-import static com.spotify.configuration.UrlManager.SIGN_UP_URL;
 
-@DefaultUrl(SIGN_UP_URL)
 public class SignUpPage {
 
     private By passwordField = By.xpath(".//input[@type='password']");

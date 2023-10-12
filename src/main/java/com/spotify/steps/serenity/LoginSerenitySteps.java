@@ -36,4 +36,9 @@ public class LoginSerenitySteps {
     public boolean is_home_page_opened() {
         return homePage.isHomePageOpened();
     }
+
+    @Step("Is error message shown")
+    public boolean is_error_message_shown() {
+        return loginPage.isErrorMessageShown();
+    }
 }
