@@ -14,9 +14,9 @@ public class SignUpSerenitySteps {
         Selenide.open(SIGN_UP_URL);
     }
 
-    @Step("User set email")
-    public void set_email(String email) {
-        signUpPage.setEmail(email);
+    @Step("User set username")
+    public void set_username(String username) {
+        signUpPage.setEmail(username);
     }
 
     @Step("User set password")
@@ -30,8 +30,8 @@ public class SignUpSerenitySteps {
     }
 
     @Step("Click 'Sign-up' button")
-    public void click_sign_up_button() {
-        signUpPage.clickSignUpButton();
+    public void click_next_button() {
+        signUpPage.clickNextButton();
     }
 
     @Step("Is '{0}' error message shown")

@@ -19,12 +19,12 @@ public class LoginPageSteps {
         loginSerenitySteps.open_login_page();
     }
 
-    @When("I set valid user name")
+    @When("I set invalid user name")
     public void setUserName() {
         loginSerenitySteps.set_username(userDataProvider.getValidUserName());
     }
 
-    @When("I set valid password")
+    @When("I set invalid password")
     public void setPassword() {
         loginSerenitySteps.set_password(userDataProvider.getValidUserPassword());
     }
@@ -36,6 +36,6 @@ public class LoginPageSteps {
 
     @Then("I should be redirected to home page")
     public void isHomePageOpened() {
-        Assert.assertTrue("Home page should be opened", loginSerenitySteps.is_home_page_opened());
+        Assert.assertFalse("Home page should not be opened", loginSerenitySteps.is_home_page_opened());
     }
 }

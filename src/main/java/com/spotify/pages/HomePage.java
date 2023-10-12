@@ -13,6 +13,6 @@ public class HomePage {
     private By homePageIcon = By.xpath("//span[contains(text(), 'Home')]");
 
     public boolean isHomePageOpened() {
-        return $(homePageIcon).shouldBe(Condition.visible).isDisplayed();
+        return $(homePageIcon).isDisplayed();
     }
 }

@@ -20,7 +20,7 @@ public class SignUpPage {
     private By monthDropDown = By.xpath("//select[@id='month']");
     private By yearOfBirthField = By.xpath("//input[@id='year']");
     private By genderRadioButtons = By.xpath("//fieldset//div//label[contains(text, '%s')]");
-    private By signUpButton = By.xpath("//button[@type='submit']");
+    private By nextButton = By.xpath("//button//span[contains(text(), 'Next')]");
     private By closePopOverButton = By.xpath("//div[@id='onetrust-close-btn-container']");
 
     public SignUpPage setEmail(String email) {
@@ -72,8 +72,8 @@ public class SignUpPage {
         return this;
     }
 
-    public SignUpPage clickSignUpButton() {
-        $(signUpButton).should(Condition.exist)
+    public SignUpPage clickNextButton() {
+        $(nextButton).should(Condition.exist)
                 .shouldBe(Condition.enabled)
                 .click();
         return this;

@@ -25,13 +25,13 @@ public class SignUpPageSteps {
 
     @When("I set invalid username")
     public SignUpPageSteps setUsername() {
-        signUpSerenitySteps.set_password(userDataProvider.getInvalidUserName());
+        signUpSerenitySteps.set_username(userDataProvider.getInvalidUserName());
         return this;
     }
 
-    @When("I press 'Sign-up' button")
-    public void clickSignUpButton() {
-        signUpSerenitySteps.click_sign_up_button();
+    @When("I press 'Next' button")
+    public void clickNextButton() {
+        signUpSerenitySteps.click_next_button();
     }
 
     @Then("I see error message \"$errorMessage\"")
