@@ -5,15 +5,17 @@ import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.junit.Test;
 
 import java.io.IOException;
 
 /**
  * You should add your client secret and client id as a system variable
  **/
+
 public class AccessTokenManager {
-    private final static String CLIENT_SECRET = System.getenv("SPOTIFY_CLIENT_SECRET");
-    private final static String CLIENT_ID = System.getenv("SPOTIFY_CLIENT_ID");
+    private static final String CLIENT_SECRET = System.getenv("SPOTIFY_CLIENT_SECRET");
+    private static final String CLIENT_ID = System.getenv("SPOTIFY_CLIENT_ID");
     private static final OkHttpClient client = new OkHttpClient();
 
     @Step
