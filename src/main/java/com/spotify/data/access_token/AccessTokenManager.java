@@ -1,22 +1,21 @@
 package com.spotify.data.access_token;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.Step;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import org.junit.Test;
 
 import java.io.IOException;
-
-/**
- * You should add your client secret and client id as a system variable
- **/
 
 public class AccessTokenManager {
     private static final String CLIENT_SECRET = System.getenv("SPOTIFY_CLIENT_SECRET");
     private static final String CLIENT_ID = System.getenv("SPOTIFY_CLIENT_ID");
+    private static final String PROFILE_ID = System.getenv("SPOTIFY_PROFILE_ID");
     private static final OkHttpClient client = new OkHttpClient();
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     @Step
     public static String generateAccessToken() {
@@ -32,10 +31,18 @@ public class AccessTokenManager {
                 .post(formBody)
                 .build();
 
-        Response response;
+        try (Response response = client.newCall(request).execute()) {
+            String responseBody = response.body().string();
+            return parseAccessToken(responseBody);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static String parseAccessToken(String jsonResponse) {
         try {
-            response = client.newCall(request).execute();
-            return response.body().string();
+            JsonNode jsonNode = objectMapper.readTree(jsonResponse);
+            return jsonNode.get("access_token").asText();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
