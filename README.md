@@ -1,6 +1,5 @@
 # Spotify Automation Project
 This is simple automation project. It is support  Web UI and API testing.
-You can also install jBehave support, karate plugins
 
 ## Supported browser
     Google Chrome
@@ -16,5 +15,9 @@ You can also install jBehave support, karate plugins
 8. Allure report
 9. Junit5
 10. Karate
+
+## Plugins
+1. JBehave support
+2. Karate
 
 ## Running test and generating reports
