@@ -1,9 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite configfailurepolicy="continue" group-by-instances="true" name="Tests" parallel="tests"
-       thread-count="1" verbose="1">
-    <test group-by-instances="true" name="rerun">
-        <classes>
-<!--            <class name="homepage.com.spotify.web.Signup"/>-->
-        </classes>
-    </test>
-</suite>

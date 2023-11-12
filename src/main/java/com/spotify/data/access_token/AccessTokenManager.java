@@ -10,6 +10,9 @@ import okhttp3.Response;
 
 import java.io.IOException;
 
+/**
+ * You should add your client secret and client id as a system variable
+ **/
 public class AccessTokenManager {
     private static final String CLIENT_SECRET = System.getenv("SPOTIFY_CLIENT_SECRET");
     private static final String CLIENT_ID = System.getenv("SPOTIFY_CLIENT_ID");
