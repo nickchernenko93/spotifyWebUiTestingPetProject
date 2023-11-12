@@ -1,4 +1,4 @@
-package com.spotify.web.features;
+package com.spotify.web;
 
 import net.serenitybdd.jbehave.SerenityStory;
 
