@@ -1,4 +1,4 @@
-package com.spotify;
+package com.spotify.web;
 
 import net.serenitybdd.jbehave.SerenityStories;
 

@@ -12,7 +12,6 @@ public class SignUpPageSteps {
     @Steps
     SignUpSerenitySteps signUpSerenitySteps;
 
-
     @Given("I open sign up page")
     public void openSignUpPage() {
         signUpSerenitySteps.open_signup_page();

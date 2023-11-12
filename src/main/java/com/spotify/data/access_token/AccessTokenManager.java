@@ -13,7 +13,6 @@ import java.io.IOException;
 public class AccessTokenManager {
     private static final String CLIENT_SECRET = System.getenv("SPOTIFY_CLIENT_SECRET");
     private static final String CLIENT_ID = System.getenv("SPOTIFY_CLIENT_ID");
-    private static final String PROFILE_ID = System.getenv("SPOTIFY_PROFILE_ID");
     private static final OkHttpClient client = new OkHttpClient();
     private static final ObjectMapper objectMapper = new ObjectMapper();
 

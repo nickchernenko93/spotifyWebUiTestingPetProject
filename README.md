@@ -1,5 +1,5 @@
 # Spotify Automation Project
-This is simple automation project. It is support  Web UI testing.
+This is simple automation project. It is support  Web UI and API testing.
 
 ## Supported browser
     Google Chrome
@@ -14,6 +14,7 @@ This is simple automation project. It is support  Web UI testing.
 7. Jenkins CI
 8. Allure report
 9. Junit5
+10. Karate
 
 ## Running test and generating reports
 1. To run tests execute mvn clean verify

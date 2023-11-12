@@ -5,6 +5,5 @@ public class KarateTestRunner {
     @Karate.Test
     Karate getMyProfileDataAndVerifyUserName() {
         return Karate.run("profileData").relativeTo(getClass());
-
     }
 }
