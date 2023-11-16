@@ -133,14 +133,15 @@
         </dependency>
     </dependencies>
     <build>
-        <testResources>
-            <testResource>
-                <directory>src/test/java</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </testResource>
-        </testResources>
+<!--If you want run api test - uncomment this lane(jenkins can not run ui test when this option is active)-->
+<!--                <testResources>-->
+<!--            <testResource>-->
+<!--                <directory>src/test/java</directory>-->
+<!--                <excludes>-->
+<!--                    <exclude>**/*.java</exclude>-->
+<!--                </excludes>-->
+<!--            </testResource>-->
+<!--        </testResources>-->
         <plugins>
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>

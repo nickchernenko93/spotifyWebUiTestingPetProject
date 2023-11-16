@@ -21,3 +21,4 @@ This is simple automation project. It is support  Web UI and API testing.
 2. Karate
 
 ## Running test and generating reports
+Please use mvn clean verify to run UI test. API test could be run from KarateRunnerTest file

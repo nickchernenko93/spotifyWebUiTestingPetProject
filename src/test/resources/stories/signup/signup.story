@@ -1,5 +1,5 @@
 Narrative:
-To covered basic sign up test
+To covered basic sign up logic
 
 Scenario: Type invalid username
 Given I open sign up page
